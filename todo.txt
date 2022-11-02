@@ -1,2 +1,0 @@
-read data blabla
-blabla

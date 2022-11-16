@@ -1,6 +1,8 @@
+
 import java.io.Console;
 public class Game {
     public static void main(String[] args) {
+
         System.out.println("Hello Java");
 	System.out.println("Welcome to the Countries game.");
 	Console console = System.console();

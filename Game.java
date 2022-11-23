@@ -10,12 +10,15 @@ public class Game {
 	System.out.println("Countries Game");
 	Console console = System.console();
 	BufferedReader br = null;
+	int total = 0;
+	int correct = 0;
 	
 	try {
 	    br = new BufferedReader(new FileReader("continents.csv"));
 	    String line;
 	
 	    while((line=br.readLine()) != null) {
+		total++;
 		String[] cols = line.split(",");
 		String country = cols[0];
 		String continent= cols[1];
@@ -23,7 +26,7 @@ public class Game {
 	
 	if(answer.equals(continent)) {
 	    System.out.println("Correct!");
-
+		correct++;
 	}
 	else {
 	    System.out.println("No, the answer is " + continent);
@@ -36,5 +39,6 @@ public class Game {
 	}catch(IOException e) {
 	    e.printStackTrace();
 	}
+	System.out.println("You scored  " + correct+ " out of  " + total);
     }
 }

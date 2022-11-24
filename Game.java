@@ -22,9 +22,9 @@ public class Game {
 		String[] cols = line.split(",");
 		String country = cols[0];
 		String continent= cols[1];
-		String answer= console.readLine("which continent does " + country+ " belong to?");
+		String answer= console.readLine("which continent does " + country + " belong to?");
 	
-	if(answer.equals(continent)) {
+	if(answer.equalsIgnoreCase(continent)) {
 	    System.out.println("Correct!");
 		correct++;
 	}
